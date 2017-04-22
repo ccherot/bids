@@ -1,0 +1,29 @@
+<!--
+<p>this is the main component</p>
+currentUserName: 
+{{ currentUserName }}
+<br>isLoggedIn:
+{{ isLoggedIn }}
+<br>
+-->
+<app-login 
+  *ngIf="!isLoggedIn" 
+  (loginEvent)="onLoginEvent($event)">
+</app-login>
+<!-- {{ products | json }} -->
+
+<app-bids 
+  *ngIf="bidsVisible" 
+  (endBidEvent)="onEndBidEvent($event)" 
+  (updateProductsEvent)="onUpdateProducts($event)"
+  [products]="products"
+  [currentUserName]="currentUserName">
+</app-bids>
+<app-results 
+  *ngIf="resultsVisible" 
+  (startBidEvent)="onStartBidEvent($event)" 
+  (logoutEvent)="onLogoutEvent($event)" 
+  [products]="products">
+</app-results>
+
+

@@ -1,0 +1,18 @@
+<div id="resultsContainer" class="resultsContainerClass">
+<!-- {{ products | json }} -->
+  <div id="resultProductContainer" class="resultProductContainerClass">
+    <app-result-product-view 
+        *ngFor="let product of products"
+        [product]="product">
+      </app-result-product-view>
+  </div>
+  <button 
+    (click)="onClickStartBid()"
+    id="startBidButton"
+    class="startBidButtonClass">Start Bid
+  </button>
+  <button 
+    (click)="onClickLogout()"
+    id="logoutButton"
+    class="logoutButtonClass">Logout
+  </button>

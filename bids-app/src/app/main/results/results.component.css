@@ -1,0 +1,13 @@
+.resultsContainerClass {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.startBidButtonClass {
+    margin-top: 10px;
+}
+
+.logoutButtonClass {
+    margin-top: 10px;
+}

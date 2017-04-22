@@ -1,0 +1,49 @@
+
+<div id="containerDiv" class="containerDivClass">
+  <p>{{product.productName}}</p>
+  
+
+<form id="bidForm" class="bidFormClass" (submit)="onClickBid()" name="bidForm" #formData="ngForm">
+<input
+  type="text"
+  name="bidInput"
+  class="bidInputClass"
+  id="bidInput"
+  required
+  [(ngModel)]="bidValue">
+  <input 
+  type="submit"
+  id="bidButton"
+  name="bidButton"
+  value="Bid"
+  class="bidButtonClass"
+  [disabled]='!formData.form.valid'>
+</form>
+<br>
+<label 
+  id="currentBidsLabel"
+  class="currentBidsLabel"
+>Current Bids:</label>
+<br>
+<div>
+<!-- {{ product | json }} -->
+<!-- {{ product.bids | json}} -->
+<ul>
+  <li 
+    id="bidListItem"
+    *ngFor="let bid of product.bids | bidSearch:bidFilterString"
+    class="bidListItemClass"
+    name="bidListItem">
+    {{ bid.bidderName }}: {{ bid.bidValue | currency:'USD':true }}
+    </li>     
+</ul>
+<input 
+  type="text"
+  placeholder="Search"
+  id="bidFilterInput"
+  class="bidFilterInputClass"
+  [(ngModel)]="bidFilterString">
+</div>
+</div>
+
+

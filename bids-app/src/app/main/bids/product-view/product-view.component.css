@@ -1,0 +1,10 @@
+.containerDivClass {
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    border: 3px solid #73AD21; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+

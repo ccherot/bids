@@ -1,0 +1,21 @@
+<div>
+<form id="loginForm" class="loginFormClass" (submit)="onClickLogin()" name="loginForm">
+<label id="loginEmailabel"name="loginEmailLabel" class="loginEmailLabelClass">Username (minimum 4 characters, max of 24):</label>
+<br>
+<input
+  type="text"
+  name="loginUsernameInput"
+  class="usernameInputClass"
+  id="loginUsernameInput"
+  [(ngModel)]="username"
+  required
+  minlength="4"
+  maxlength="24">
+  <input 
+  type="submit"
+  id="loginSubmit"
+  name="Login"
+  value="Login"
+  class="loginButtonClass">
+</form>
+</div>

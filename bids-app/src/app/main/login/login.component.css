@@ -1,0 +1,14 @@
+div {
+   width: 300px;
+   margin-left: auto;
+   margin-right: auto; 
+   margin-top: 200px;
+}
+
+.loginButtonClass {
+    float: right;
+}
+
+.usernameInputClass {
+    width: 240px;
+}
