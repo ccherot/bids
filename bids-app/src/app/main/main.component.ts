@@ -42,16 +42,16 @@ export class MainComponent implements OnInit {
 
     console.log("main.component: ngOnInit: currentUserName is ", this.currentUserName)
     
+    //get the products...if they do not exist yet they will be created
+    this.getProducts()
+
     if ( this.currentUserName != "" && this.currentUserName != undefined)
     {
       this.isLoggedIn = true;
       this.bidsVisible = true;
       this.resultsVisible = false
 
-      //if we have products already we have to delete them 
-      //check to see if we have our three products in the db already. if
-      //we do then we do not need to add any!!!
-      this.getProducts()
+    
 
     }
   }
